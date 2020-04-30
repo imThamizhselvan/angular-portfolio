@@ -1,0 +1,35 @@
+a {
+    text-decoration: none;
+}
+
+.portfolio-category {
+    text-align: center;
+    ul {
+        padding: inherit;
+    }
+    li {
+        display: inline-block;
+        margin: 10px;
+    }
+}
+
+
+.portfolio-category ul li a {
+    color: #fff;
+    padding: 6px 16px;
+    border-radius: 15px;
+    letter-spacing: 0.03em;
+    transition: .3s;
+}
+
+.portfolio-category ul li a:hover {
+    color: #fff;
+    background: #262626;
+    box-shadow: #000000 2px 2px 8px,#4d4d4d -2px -2px 8px;
+}
+
+.portfolio-category ul li.active a {
+    color: #fff;
+    background: #262626;
+    box-shadow: #000000 2px 2px 8px,#4d4d4d -2px -2px 8px;
+}
