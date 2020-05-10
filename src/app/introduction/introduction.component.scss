@@ -1,0 +1,58 @@
+.highlight {
+    color: #e31b6d;
+}
+
+.introContainer {
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px;
+}
+
+.newsletterContainer {
+    flex-direction: column;
+    padding: 30px;
+    box-shadow: #000000 2px 2px 6px, #4d4d4d -2px -2px 6px;
+    border-radius: 15px;
+    margin: 20px;
+    margin-top: 30px;
+    display: flex;
+}
+
+.inputEmail {
+    width: 100%;
+    height: 50px;
+    border-radius: 30px;
+    border: none;
+    padding-left: 15px;
+    outline: none;
+}
+
+.subscribeBtnContainer {
+    position: absolute;
+    right: 3px;
+    top: 3px;
+}
+
+.subscribeBtn {
+    color: #fff;
+    background: #14161b;
+    border: 1px solid;
+    padding: 12px 32px;
+    font-size: 18px;
+    text-transform: capitalize;
+    font-weight: 700;
+    letter-spacing: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    outline: none;
+
+}
+
+.newsletterInput {
+    position: relative;
+    padding-right: 15px;
+    min-width: 250px;
+}
