@@ -19,6 +19,9 @@
     margin: 20px;
     margin-top: 30px;
     display: flex;
+    fa-icon {
+        font-size: 30px;
+    }
 }
 
 .inputEmail {
@@ -55,4 +58,5 @@
     position: relative;
     padding-right: 15px;
     min-width: 250px;
+    margin-top: 20px;
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { faEnvelopeOpen } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-introduction',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./introduction.component.scss']
 })
 export class IntroductionComponent implements OnInit {
+  faEnvelopeOpen = faEnvelopeOpen;
 
   constructor() { }
 

@@ -1,0 +1,40 @@
+.contact-container {
+    text-align: center;
+}
+
+.flex-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    div {
+        margin: 20px;
+    }
+}
+
+.flex-wrapper.contact {
+    width: 70%;
+    margin: auto;
+    input {
+        width: 100%;
+        height: 50px;
+        border-radius: 30px;
+        border: none;
+        padding-left: 15px;
+        outline: none;
+        margin-bottom: 20px;
+    }    
+    button {
+        color: #fff;
+        background: #14161b;
+        border: 1px solid;
+        padding: 12px 32px;
+        font-size: 18px;
+        text-transform: capitalize;
+        font-weight: 700;
+        letter-spacing: 0;
+        border-radius: 30px;
+        cursor: pointer;
+        outline: none;
+    }
+}
