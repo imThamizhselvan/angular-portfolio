@@ -1,17 +1,14 @@
-<div class="portfolio-category">
+<div class="portfolio-category" id="about">
     <nav>
         <ul>
-            <li>
-                <a href="#">About me</a>
+            <li (click)="setActive('about')">
+                <a [ngClass]="active == 'about' ? 'active' : ''" href="#about">About</a>
             </li>
-            <li>
-                <a href="#">Works</a>
+            <li (click)="setActive('works')">
+                <a [ngClass]="active  == 'works'? 'active' : ''" href="#works">Works</a>
             </li>
-            <li>
-                <a href="#">Blog</a>
-            </li>
-            <li>
-                <a href="#">Contact me</a>
+            <li (click)="setActive('contact')">
+                <a [ngClass]="active  == 'contact'? 'active' : ''" href="#contact">Contact</a>
             </li>
         </ul>
     </nav>

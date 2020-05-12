@@ -1,5 +1,6 @@
 .contact-container {
     text-align: center;
+    margin-top: 40px;
 }
 
 .flex-wrapper {
@@ -8,7 +9,7 @@
     text-align: center;
     justify-content: center;
     div {
-        margin: 20px;
+        margin: 0px 20px 10px 20px;
     }
 }
 
@@ -24,17 +25,18 @@
         outline: none;
         margin-bottom: 20px;
     }    
-    button {
-        color: #fff;
-        background: #14161b;
-        border: 1px solid;
-        padding: 12px 32px;
-        font-size: 18px;
-        text-transform: capitalize;
-        font-weight: 700;
-        letter-spacing: 0;
-        border-radius: 30px;
-        cursor: pointer;
-        outline: none;
-    }
+}
+
+.primary-btn {
+    color: #fff;
+    background: #14161b;
+    border: 1px solid;
+    padding: 12px 32px;
+    font-size: 18px;
+    text-transform: capitalize;
+    font-weight: 700;
+    letter-spacing: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    outline: none;
 }

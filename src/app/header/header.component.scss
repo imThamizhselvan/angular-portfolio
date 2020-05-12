@@ -15,21 +15,19 @@ a {
 
 
 .portfolio-category ul li a {
-    color: #fff;
-    padding: 6px 16px;
-    border-radius: 15px;
+    color: #ffffff;
+    padding: 10px 16px;
+    border-radius: 10px;
     letter-spacing: 0.03em;
     transition: .3s;
+    font-weight: bold;
 }
 
-.portfolio-category ul li a:hover {
-    color: #fff;
-    background: #262626;
-    box-shadow: #000000 2px 2px 8px,#4d4d4d -2px -2px 8px;
+.portfolio-category ul li a:hover, .portfolio-category ul li a.active  {
+    color: #da6d3c;
+    border-radius: 10px;
+    background: #212529;
+    box-shadow: inset 5px 5px 2px #0d0f10, 
+    inset -5px -5px 2px #353b42;
 }
 
-.portfolio-category ul li.active a {
-    color: #fff;
-    background: #262626;
-    box-shadow: #000000 2px 2px 8px,#4d4d4d -2px -2px 8px;
-}

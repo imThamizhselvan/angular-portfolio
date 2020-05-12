@@ -1,14 +1,14 @@
-<div class="contact-container">
+<div class="contact-container" id="contact">
     <h2> Contact Me </h2>
-    <h3> Have a question or want to contact me? </h3>
+    <h3> Want to connect with me directly? </h3>
     <div class="flex-wrapper">
         <div>
-            <h4> Call Me</h4>
+            <h4> <fa-icon [icon]="faPhone"></fa-icon></h4>
             <p> +61-412998365</p>
             <p> +91-8015643515</p>
         </div>
         <div>
-            <h4> Email</h4>
+            <h4> <fa-icon [icon]="faEnvelope"></fa-icon>           </h4>
             <p> thamizhtechie@gmail.com</p>
         </div>
     </div>
@@ -16,6 +16,6 @@
         <input type="text" placeholder="Name">
         <input type="text" placeholder="Email">
         <input type="text" placeholder="Your message">
-        <button> Send message</button>
+        <button class="primary-btn"> Send message</button>
     </div>
 </div>

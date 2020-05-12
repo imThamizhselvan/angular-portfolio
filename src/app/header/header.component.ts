@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  public active = 'about';
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  setActive(tab) {
+    this.active = tab;
+  }
 }
