@@ -1,0 +1,9 @@
+.fade-up {
+    animation: fade-up 1.2s;
+  }
+
+  
+@keyframes fade-up {
+    from {opacity: 0.2; transform: translateY(50px);}
+    to {opacity: 1;}
+}
