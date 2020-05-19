@@ -12,9 +12,11 @@
         </div>
     </div>
     <div class="flex-wrapper contact">
-        <input type="text" placeholder="Name">
-        <input type="text" placeholder="Email">
-        <textarea type="text" placeholder="Message"></textarea>
-        <button class="primary-btn"> Send message</button>
+        <form action="https://formspree.io/xaypqbzv" method="post">
+            <input type="text" placeholder="Name" name="name">
+            <input type="text" placeholder="Email" name="_replyto">
+            <textarea type="text" placeholder="Message" name="message"></textarea>
+            <button type="submit" class="primary-btn"> Send message</button>
+        </form>
     </div>
 </div>
