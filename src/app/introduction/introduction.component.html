@@ -6,10 +6,14 @@
         <p> I write about Tech, Startups and Money </p>
         <fa-icon [icon]="faEnvelopeOpen"></fa-icon>
         <div class="newsletterInput">
-            <input type="text" class="inputEmail" placeholder="Your Email">
-            <div class="subscribeBtnContainer">
-                <button class="subscribeBtn"> Subscribe</button>       
-            </div>
+            <form action="https://thamizh.us18.list-manage.com/subscribe/post" method="POST">
+                <input type="hidden" name="u" value="f19b1075a1a27972014750d9b">
+                <input type="hidden" name="id" value="f4529ff4af">
+                <input type="text" name="MERGE0" value="" class="inputEmail" placeholder="Your Email">
+                <div class="subscribeBtnContainer">
+                    <button type="submit" class="subscribeBtn"> Subscribe</button>       
+                </div>
+            </form>
         </div>
     </div>
 </div>
