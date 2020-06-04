@@ -1,0 +1,16 @@
+.wrapper {
+    border: 1px solid red;
+    width: 70%;
+    margin: 0 auto;
+    div:nth-child(2) {
+        float: right;
+        background-color: green;
+        width: 70%;
+    }
+    div:first-child {
+        background-color: yellow;
+        float: left;
+        width: 30%;
+        height: auto;
+    }
+}
