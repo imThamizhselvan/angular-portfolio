@@ -2,15 +2,18 @@
     <nav>
         <ul>
             <li (click)="setActive('about')">
-                <a [ngClass]="active == 'about' ? 'active' : ''" href="#about">About</a>
+                <a routerLink="/home"  routerLinkActive="active" [ngClass]="active == 'about' ? 'active' : ''" href="#about">About</a>
             </li>
             <li (click)="setActive('works')">
-                <a [ngClass]="active  == 'works'? 'active' : ''" href="#works">Projects</a>
+                <a routerLink="/podcast"  routerLinkActive="active" [ngClass]="active  == 'works'? 'active' : ''" href="#works">Podcast</a>
             </li>
             <li (click)="setActive('contact')">
-                <a [ngClass]="active  == 'contact'? 'active' : ''" href="#contact">Newsletter</a>
+                <a routerLink="/newsletter"  routerLinkActive="active" [ngClass]="active  == 'contact'? 'active' : ''" href="#contact">Newsletter</a>
             </li>
         </ul>
     </nav>
+    <router-outlet></router-outlet>
+
+
 </div>
 
