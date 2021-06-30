@@ -4,13 +4,18 @@ a {
 
 .portfolio-category {
     background-color: #212529;
-    position: fixed;
     width: 100%;
-    border-bottom: 1px solid #171616;
-    margin-top: -20px;
     height: 60px;
     z-index: 999;
     text-align: center;
+    nav {
+        position: fixed;
+        z-index: 9999;
+        margin: auto;
+        width: 100%;
+        border-bottom: 1px solid #171616;
+        background-color: #212529;
+    }
     ul {
         padding: inherit;
     }
