@@ -13,6 +13,7 @@ import { WorkComponent } from './work/work.component';
 import { NewsletterComponent } from './newsletter/newsletter.component';
 import { HomeComponent } from './home/home.component';
 import { PodcastComponent } from './podcast/podcast.component';
+import { BooksComponent } from './books/books.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { PodcastComponent } from './podcast/podcast.component';
     WorkComponent,
     NewsletterComponent,
     HomeComponent,
-    PodcastComponent
+    PodcastComponent,
+    BooksComponent
   ],
   imports: [
     BrowserModule,

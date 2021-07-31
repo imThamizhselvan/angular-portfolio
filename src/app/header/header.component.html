@@ -4,11 +4,14 @@
             <li (click)="setActive('about')">
                 <a routerLink="/home"  routerLinkActive="active" [ngClass]="active == 'about' ? 'active' : ''" href="#about">About</a>
             </li>
-            <li (click)="setActive('works')">
+            <!-- <li (click)="setActive('works')">
                 <a routerLink="/podcast"  routerLinkActive="active" [ngClass]="active  == 'works'? 'active' : ''" href="#works">Podcast</a>
-            </li>
+            </li> -->
             <li (click)="setActive('contact')">
                 <a routerLink="/newsletter"  routerLinkActive="active" [ngClass]="active  == 'contact'? 'active' : ''" href="#contact">Newsletter</a>
+            </li>
+            <li (click)="setActive('book')">
+                <a routerLink="/book"  routerLinkActive="active" [ngClass]="active  == 'book'? 'active' : ''" href="#book">Bookshelf</a>
             </li>
         </ul>
     </nav>
