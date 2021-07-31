@@ -1,0 +1,24 @@
+.workContainer {
+    text-align: center;
+    padding-top: 70px;
+}
+
+.flex-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: inherit;
+    border-radius: 15px;
+ 
+    .workParts {
+        margin: 20px;
+        flex-grow: 1;
+
+        padding: 20px;
+        border-radius: 15px;
+        background: #212529;
+        box-shadow: #000000 2px 2px 6px, #4d4d4d -2px -2px 6px;
+
+    }
+}
+
