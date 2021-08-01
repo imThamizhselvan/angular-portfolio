@@ -1,17 +1,17 @@
 <div class="portfolio-category">
     <nav>
         <ul>
-            <li (click)="setActive('about')">
-                <a routerLink="/home"  routerLinkActive="active" [ngClass]="active == 'about' ? 'active' : ''" href="#about">About</a>
+            <li (click)="setActive('home')">
+                <a routerLink="/home"  routerLinkActive="active" [ngClass]="active == 'home' ? 'active' : ''">About</a>
             </li>
             <!-- <li (click)="setActive('works')">
                 <a routerLink="/podcast"  routerLinkActive="active" [ngClass]="active  == 'works'? 'active' : ''" href="#works">Podcast</a>
             </li> -->
             <li (click)="setActive('contact')">
-                <a routerLink="/newsletter"  routerLinkActive="active" [ngClass]="active  == 'contact'? 'active' : ''" href="#contact">Letters</a>
+                <a routerLink="/newsletter"  routerLinkActive="active" [ngClass]="active  == 'contact'? 'active' : ''">Letters</a>
             </li>
             <li (click)="setActive('book')">
-                <a routerLink="/book"  routerLinkActive="active" [ngClass]="active  == 'book'? 'active' : ''" href="#book">Bookshelf</a>
+                <a routerLink="/book"  routerLinkActive="active" [ngClass]="active  == 'book'? 'active' : ''">Bookshelf</a>
             </li>
         </ul>
     </nav>
