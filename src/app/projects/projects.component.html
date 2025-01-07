@@ -1,0 +1,72 @@
+<div class="wrapper">
+  <!-- Header -->
+
+
+  <!-- Main Content -->
+  <div class="projects-container">
+    <!-- Loading Skeleton -->
+    <ng-container *ngIf="isLoading">
+      <div class="project-skeleton" *ngFor="let i of [1,2]" @fadeInUp>
+        <div class="skeleton-content">
+          <div class="skeleton-title"></div>
+          <div class="skeleton-description"></div>
+          <div class="skeleton-video"></div>
+          <div class="skeleton-tech">
+            <div class="skeleton-tech-title"></div>
+            <div class="skeleton-tech-tags">
+              <div class="skeleton-tag" *ngFor="let i of [1,2,3]"></div>
+            </div>
+          </div>
+          <div class="skeleton-link"></div>
+        </div>
+      </div>
+    </ng-container>
+
+    <!-- Projects -->
+    <ng-container *ngIf="!isLoading">
+      <div class="project" 
+           *ngFor="let project of projects"
+           @fadeInUp 
+           [@scale]="projectState" 
+           (mouseenter)="projectState='hovered'" 
+           (mouseleave)="projectState='normal'">
+        
+        <h2>{{project.title}}</h2>
+        <p class="description">{{project.description}}</p>
+        
+        <div class="video-container">
+          <video controls *ngIf="project.videoUrl">
+            <source [src]="project.videoUrl" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <div class="tech-stack">
+          <h3>Tech Stack</h3>
+          <div class="tech-tags">
+            <span class="tech-tag" *ngFor="let tech of project.techStack">
+              <img [src]="getTechLogo(tech)" [alt]="tech" class="tech-logo">
+              {{tech}}
+            </span>
+          </div>
+        </div>
+
+        <a *ngIf="project.twitterLink" 
+           [href]="project.twitterLink" 
+           target="_blank" 
+           class="twitter-link">
+           View on Twitter
+        </a>
+      </div>
+    </ng-container>
+  </div>
+
+  <!-- Scroll to top button -->
+  <button 
+    *ngIf="showScrollTop" 
+    class="scroll-top" 
+    (click)="scrollToTop()" 
+    @fadeInUp>
+    ↑
+  </button>
+</div>

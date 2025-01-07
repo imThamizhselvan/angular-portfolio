@@ -10,9 +10,33 @@
   <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
-  <script type="text/javascript">Calendly.initBadgeWidget({ url: 'https://calendly.com/thamil/15min?background_color=212529&text_color=dfe4eb', text: 'Schedule meeting', color: '#14161b', textColor: '#dfe4eb', branding: false });</script>
+  <!-- Twitter Widget Script -->
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  <!-- Twitter Widget Styling -->
+  <style>
+    /* Make Twitter timeline responsive */
+    .twitter-timeline {
+      max-width: 100% !important;
+      width: 100% !important;
+    }
+    
+    /* Customize Twitter embed appearance */
+    .twitter-tweet {
+      margin: 0 auto;
+    }
+    
+    /* Optional: Add a border around Twitter embeds */
+    .twitter-timeline-rendered {
+      border: 1px solid #e1e8ed;
+      border-radius: 5px;
+    }
+    
+    /* Ensure proper spacing around embeds */
+    .twitter-timeline-wrapper {
+      margin: 1em 0;
+      padding: 0;
+    }
+  </style>
 </head>
 <body>
   <app-root></app-root>
