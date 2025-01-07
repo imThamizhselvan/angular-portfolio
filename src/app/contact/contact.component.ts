@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faPhone, faEnvelope, faFileAlt } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-contact',
@@ -9,6 +9,7 @@ import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 export class ContactComponent implements OnInit {
   faPhone = faPhone;
   faEnvelope = faEnvelope;
+  faFileAlt = faFileAlt;
 
   constructor() { }
 
