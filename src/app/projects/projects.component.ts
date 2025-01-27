@@ -7,7 +7,7 @@ interface Project {
   description: string;
   videoUrl?: string;
   techStack: string[];
-  twitterLink?: string;
+  link?: string;
 }
 
 @Component({
@@ -34,39 +34,39 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
   projects: Project[] = [
     // Add your projects here, for example:
     {
-      title: 'Project 1',
-      description: 'Description of project 1',
+      title: 'Todo app',
+      description: 'Easy to use TODO',
       videoUrl: 'assets/videos/project1.mp4',
-      techStack: ['Angular', 'TypeScript', 'SCSS', 'CSS', 'React'],
-      twitterLink: 'https://twitter.com/...'
+      techStack: ['Bolt', 'Cursor', 'Supbase', 'Netlify', 'React'],
+      link: 'https://todo.thamil.me'
+    },
+    {
+      title: 'Deepseek chat',
+      description: 'Deepseek chatbot',
+      videoUrl: 'assets/videos/project1.mp4',
+      techStack: ['DeepSeek', 'TypeScript', 'React', 'Netlify'],
+      link: 'https://deepseek.thamil.me/'
     },
     {
       title: 'Project 1',
       description: 'Description of project 1',
       videoUrl: 'assets/videos/project1.mp4',
       techStack: ['Angular', 'TypeScript', 'SCSS'],
-      twitterLink: 'https://twitter.com/...'
+      link: 'https://twitter.com/...'
     },
     {
       title: 'Project 1',
       description: 'Description of project 1',
       videoUrl: 'assets/videos/project1.mp4',
       techStack: ['Angular', 'TypeScript', 'SCSS'],
-      twitterLink: 'https://twitter.com/...'
+      link: 'https://twitter.com/...'
     },
     {
       title: 'Project 1',
       description: 'Description of project 1',
       videoUrl: 'assets/videos/project1.mp4',
       techStack: ['Angular', 'TypeScript', 'SCSS'],
-      twitterLink: 'https://twitter.com/...'
-    },
-    {
-      title: 'Project 1',
-      description: 'Description of project 1',
-      videoUrl: 'assets/videos/project1.mp4',
-      techStack: ['Angular', 'TypeScript', 'SCSS'],
-      twitterLink: 'https://twitter.com/...'
+      link: 'https://twitter.com/...'
     }
   ];
 
