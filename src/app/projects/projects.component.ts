@@ -46,27 +46,6 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
       videoUrl: 'assets/videos/project1.mp4',
       techStack: ['DeepSeek', 'TypeScript', 'React', 'Netlify'],
       link: 'https://deepseek.thamil.me/'
-    },
-    {
-      title: 'Project 1',
-      description: 'Description of project 1',
-      videoUrl: 'assets/videos/project1.mp4',
-      techStack: ['Angular', 'TypeScript', 'SCSS'],
-      link: 'https://twitter.com/...'
-    },
-    {
-      title: 'Project 1',
-      description: 'Description of project 1',
-      videoUrl: 'assets/videos/project1.mp4',
-      techStack: ['Angular', 'TypeScript', 'SCSS'],
-      link: 'https://twitter.com/...'
-    },
-    {
-      title: 'Project 1',
-      description: 'Description of project 1',
-      videoUrl: 'assets/videos/project1.mp4',
-      techStack: ['Angular', 'TypeScript', 'SCSS'],
-      link: 'https://twitter.com/...'
     }
   ];
 
