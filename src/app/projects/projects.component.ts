@@ -34,17 +34,17 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
   projects: Project[] = [
     // Add your projects here, for example:
     {
-      title: 'Todo app',
-      description: 'Easy to use TODO',
-      videoUrl: 'assets/videos/project1.mp4',
-      techStack: ['Bolt', 'Cursor', 'Supbase', 'Netlify', 'React'],
+      title: 'Todo AI app',
+      description: 'Easy to use TODO that integrates with OpenAI and Supabase',
+      videoUrl: 'assets/videos/todo.mp4',
+      techStack: [ 'Cursor', 'Supabase', 'Netlify', 'React', 'OpenAI', 'TypeScript'],
       link: 'https://todo.thamil.me'
     },
     {
-      title: 'Deepseek chat',
-      description: 'Deepseek chatbot',
-      videoUrl: 'assets/videos/project1.mp4',
-      techStack: ['DeepSeek', 'TypeScript', 'React', 'Netlify'],
+      title: 'Deepseek AI chat',
+      description: 'Deepseek chatbot that integrates with Deepseek API and OpenAI API',
+      videoUrl: 'assets/videos/chatbot.mp4',
+      techStack: ['OpenAI', 'TypeScript', 'React', 'Netlify', 'Cursor'],
       link: 'https://deepseek.thamil.me/'
     }
   ];
@@ -92,7 +92,14 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
       'Firebase': 'firebase',
       'Vue.js': 'vuedotjs',
       'Next.js': 'nextdotjs',
-      'TailwindCSS': 'tailwindcss'
+      'TailwindCSS': 'tailwindcss',
+      'Bolt': 'openai',
+      'Cursor': 'cursor',
+      'Supabase': 'supabase',
+      'Netlify': 'netlify',
+      'DeepSeek': 'openai',
+      'OpenAI': 'openai',
+
     };
     
     const slug = techSlugs[tech];
