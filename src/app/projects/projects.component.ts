@@ -11,24 +11,23 @@ interface Project {
 }
 
 @Component({
-  selector: 'app-projects',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './projects.component.html',
-  styleUrls: ['./projects.component.scss'],
-  animations: [
-    trigger('fadeInUp', [
-      transition(':enter', [
-        style({ opacity: 0, transform: 'translateY(20px)' }),
-        animate('500ms ease-out', style({ opacity: 1, transform: 'translateY(0)' }))
-      ])
-    ]),
-    trigger('scale', [
-      state('normal', style({ transform: 'scale(1)' })),
-      state('hovered', style({ transform: 'scale(1.02)' })),
-      transition('normal <=> hovered', animate('200ms ease-in-out'))
-    ])
-  ]
+    selector: 'app-projects',
+    imports: [CommonModule],
+    templateUrl: './projects.component.html',
+    styleUrls: ['./projects.component.scss'],
+    animations: [
+        trigger('fadeInUp', [
+            transition(':enter', [
+                style({ opacity: 0, transform: 'translateY(20px)' }),
+                animate('500ms ease-out', style({ opacity: 1, transform: 'translateY(0)' }))
+            ])
+        ]),
+        trigger('scale', [
+            state('normal', style({ transform: 'scale(1)' })),
+            state('hovered', style({ transform: 'scale(1.02)' })),
+            transition('normal <=> hovered', animate('200ms ease-in-out'))
+        ])
+    ]
 })
 export class ProjectsComponent implements OnInit, AfterViewInit {
   projects: Project[] = [

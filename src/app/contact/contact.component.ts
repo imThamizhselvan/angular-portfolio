@@ -2,9 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { faPhone, faEnvelope, faFileAlt } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
-  selector: 'app-contact',
-  templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.scss', '../app.component.scss']
+    selector: 'app-contact',
+    templateUrl: './contact.component.html',
+    styleUrls: ['./contact.component.scss', '../app.component.scss'],
+    standalone: false
 })
 export class ContactComponent implements OnInit {
   faPhone = faPhone;
