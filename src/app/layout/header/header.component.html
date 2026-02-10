@@ -1,0 +1,16 @@
+<div class="portfolio-category">
+    <nav>
+        <ul>
+            <li (click)="setActive('home')">
+                <a routerLink="/home" routerLinkActive="active" [ngClass]="active === 'home' ? 'active' : ''">About</a>
+            </li>
+            <li (click)="setActive('projects')">
+                <a routerLink="/projects" routerLinkActive="active" [ngClass]="active === 'projects' ? 'active' : ''">Projects</a>
+            </li>
+            <li (click)="setActive('book')">
+                <a routerLink="/book" routerLinkActive="active" [ngClass]="active === 'book' ? 'active' : ''">Bookshelf</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+

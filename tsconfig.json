@@ -8,13 +8,15 @@
     "downlevelIteration": true,
     "experimentalDecorators": true,
     "module": "esnext",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "importHelpers": true,
     "target": "es2022",
-    "lib": [
-      "es2022",
-      "dom"
-    ]
+    "paths": {
+      "@core/*": ["src/app/core/*"],
+      "@features/*": ["src/app/features/*"],
+      "@shared/*": ["src/app/shared/*"],
+      "@layout/*": ["src/app/layout/*"]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

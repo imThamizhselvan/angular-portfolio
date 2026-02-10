@@ -1,0 +1,80 @@
+<div class="wrapper">
+  <!-- Header -->
+
+
+  <!-- Main Content -->
+  <div class="projects-container">
+    <!-- Loading Skeleton -->
+    @if (isLoading) {
+      @for (i of [1,2]; track i) {
+        <div class="project-skeleton" @fadeInUp>
+          <div class="skeleton-content">
+            <div class="skeleton-title"></div>
+            <div class="skeleton-description"></div>
+            <div class="skeleton-video"></div>
+            <div class="skeleton-tech">
+              <div class="skeleton-tech-title"></div>
+              <div class="skeleton-tech-tags">
+                @for (i of [1,2,3]; track i) {
+                  <div class="skeleton-tag"></div>
+                }
+              </div>
+            </div>
+            <div class="skeleton-link"></div>
+          </div>
+        </div>
+      }
+    }
+
+    <!-- Projects -->
+    @if (!isLoading) {
+      @for (project of projects; track project) {
+        <div class="project"
+          @fadeInUp
+          [@scale]="projectState"
+          (mouseenter)="projectState='hovered'"
+          (mouseleave)="projectState='normal'">
+          <h2>{{project.title}}</h2>
+          <p class="description">{{project.description}}</p>
+          <div class="video-container">
+            @if (project.videoUrl) {
+              <video controls>
+                <source [src]="project.videoUrl" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            }
+          </div>
+          <div class="tech-stack">
+            <h3>Tech Stack</h3>
+            <div class="tech-tags">
+              @for (tech of project.techStack; track tech) {
+                <span class="tech-tag">
+                  <img [src]="getTechLogo(tech)" [alt]="tech" class="tech-logo">
+                  {{tech}}
+                </span>
+              }
+            </div>
+          </div>
+          @if (project.link) {
+            <a
+              [href]="project.link"
+              target="_blank"
+              class="twitter-link">
+              Visit website
+            </a>
+          }
+        </div>
+      }
+    }
+  </div>
+
+  <!-- Scroll to top button -->
+  @if (showScrollTop) {
+    <button
+      class="scroll-top"
+      (click)="scrollToTop()"
+      @fadeInUp>
+      ↑
+    </button>
+  }
+</div>
