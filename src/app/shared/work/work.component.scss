@@ -9,16 +9,24 @@
     justify-content: center;
     align-items: inherit;
     border-radius: 15px;
- 
+
     .workParts {
         margin: 20px;
         flex-grow: 1;
         width: 300px;
         padding: 20px;
         border-radius: 15px;
-        background: #212529;
-        box-shadow: #000000 2px 2px 6px, #4d4d4d -2px -2px 6px;
+        background: var(--bg-primary);
+        box-shadow: var(--shadow-outer-dark) 2px 2px 6px, var(--shadow-outer-light) -2px -2px 6px;
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
 
+        h2 {
+            color: var(--accent-color);
+        }
+
+        p {
+            color: var(--text-secondary);
+        }
     }
 }
 

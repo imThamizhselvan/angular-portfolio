@@ -12,6 +12,7 @@
     "importHelpers": true,
     "target": "es2022",
     "paths": {
+      "@app/*": ["src/app/*"],
       "@core/*": ["src/app/core/*"],
       "@features/*": ["src/app/features/*"],
       "@shared/*": ["src/app/shared/*"],

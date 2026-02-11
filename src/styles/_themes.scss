@@ -1,0 +1,37 @@
+// Theme CSS Custom Properties
+
+:root {
+  // Dark theme (default)
+  --bg-primary: #212529;
+  --bg-secondary: #171616;
+  --bg-elevated: #212529;
+  --text-primary: #ffffff;
+  --text-secondary: #b0b0b0;
+  --accent-color: #da6d3c;
+  --accent-hover: #e87f50;
+  --shadow-dark: #131518;
+  --shadow-light: #2f353a;
+  --shadow-outer-dark: #000000;
+  --shadow-outer-light: #4d4d4d;
+  --border-color: #171616;
+}
+
+[data-theme="light"] {
+  --bg-primary: #f5f5f5;
+  --bg-secondary: #ffffff;
+  --bg-elevated: #ffffff;
+  --text-primary: #212529;
+  --text-secondary: #555555;
+  --accent-color: #c45a2e;
+  --accent-hover: #da6d3c;
+  --shadow-dark: #d0d0d0;
+  --shadow-light: #ffffff;
+  --shadow-outer-dark: #c0c0c0;
+  --shadow-outer-light: #ffffff;
+  --border-color: #e0e0e0;
+}
+
+// Smooth theme transition
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}

@@ -2,27 +2,17 @@
     <h2 class="fade-up"> My Skills </h2>
 
     <div class="skillsContainer">
-        <div class="skillsParts">
-            <h2>Frontend</h2>
-            <p>ReactJS</p>
-            <p>Angular</p>
-            <p>NextJS</p>
-            <p>Typescript</p>
-        </div>
-        <div class="skillsParts">
-            <h2>Mobile</h2>
-            <p>React Native</p>
-            <p>Ionic</p>
-        </div>
-        <div class="skillsParts">
-            <h2>Backend</h2>
-            <p>NodeJS</p>
-            <p>AWS</p>
-            <p>MongoDB</p>
-            <p>Firebase</p>
-            <p>Supabase</p>
-            <p>Netlify</p>
-            <p>Vercel</p>
-        </div>
+        <app-skills-chart
+            title="Frontend"
+            [data]="frontendSkills">
+        </app-skills-chart>
+        <app-skills-chart
+            title="Mobile"
+            [data]="mobileSkills">
+        </app-skills-chart>
+        <app-skills-chart
+            title="Backend"
+            [data]="backendSkills">
+        </app-skills-chart>
     </div>
 </div>

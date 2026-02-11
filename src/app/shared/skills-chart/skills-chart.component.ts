@@ -1,0 +1,49 @@
+import { Component, Input, inject, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { ThemeService } from '@core/services/theme.service';
+import { SkillChartData } from '@core/models/skill.model';
+
+@Component({
+  selector: 'app-skills-chart',
+  standalone: true,
+  imports: [CommonModule, NgxChartsModule],
+  templateUrl: './skills-chart.component.html',
+  styleUrls: ['./skills-chart.component.scss']
+})
+export class SkillsChartComponent implements OnInit {
+  @Input() title = '';
+  @Input() data: SkillChartData[] = [];
+
+  private themeService = inject(ThemeService);
+
+  view: [number, number] = [350, 200];
+  showXAxis = true;
+  showYAxis = true;
+  showXAxisLabel = false;
+  showYAxisLabel = false;
+  xAxisLabel = 'Proficiency';
+  yAxisLabel = 'Skill';
+
+  colorScheme = {
+    domain: ['#da6d3c', '#e87f50', '#f59164', '#ffa378']
+  };
+
+  ngOnInit(): void {
+    this.updateChartHeight();
+  }
+
+  private updateChartHeight(): void {
+    const barHeight = 35;
+    const padding = 40;
+    this.view = [350, this.data.length * barHeight + padding];
+  }
+
+  get isDark(): boolean {
+    return this.themeService.theme() === 'dark';
+  }
+
+  get axisColor(): string {
+    return this.isDark ? '#b0b0b0' : '#555555';
+  }
+}

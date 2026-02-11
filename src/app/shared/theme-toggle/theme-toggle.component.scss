@@ -1,0 +1,33 @@
+.theme-toggle {
+  background: var(--bg-primary);
+  border: none;
+  border-radius: 10px;
+  padding: 8px 12px;
+  cursor: pointer;
+  color: var(--text-primary);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 5px 5px 2px var(--shadow-dark),
+              inset -5px -5px 2px var(--shadow-light);
+
+  &:hover {
+    color: var(--accent-color);
+  }
+
+  &:focus {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+  }
+
+  .icon {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease;
+  }
+
+  &:hover .icon {
+    transform: rotate(15deg);
+  }
+}

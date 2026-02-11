@@ -22,5 +22,9 @@ export const routes: Routes = [
     path: 'projects',
     loadComponent: () => import('./features/projects/projects.component').then(m => m.ProjectsComponent)
   },
+  {
+    path: 'blog',
+    loadChildren: () => import('./features/blog/blog.routes').then(m => m.blogRoutes)
+  },
   { path: '**', redirectTo: '/home' }
 ];

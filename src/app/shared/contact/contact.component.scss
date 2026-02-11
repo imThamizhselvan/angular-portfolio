@@ -24,15 +24,16 @@
         padding-left: 15px;
         outline: none;
         margin-bottom: 20px;
-        box-shadow: inset 8px 8px 11px #131518, inset -8px -8px 11px #2f353a;
-        background: #212529;
-        color: #fff;
-    }    
+        box-shadow: inset 8px 8px 11px var(--shadow-dark), inset -8px -8px 11px var(--shadow-light);
+        background: var(--bg-primary);
+        color: var(--text-primary);
+        transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+    }
 }
 
 .primary-btn {
-    color: #fff;
-    background: #14161b;
+    color: var(--text-primary);
+    background: var(--bg-secondary);
     border: none;
     padding: 12px 32px;
     font-size: 18px;
@@ -42,7 +43,8 @@
     border-radius: 30px;
     cursor: pointer;
     outline: none;
-    box-shadow: #000000 2px 2px 6px, #4d4d4d -2px -2px 6px;
+    box-shadow: var(--shadow-outer-dark) 2px 2px 6px, var(--shadow-outer-light) -2px -2px 6px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
 }
 
 .calendar-wrapper {
@@ -53,5 +55,5 @@
 }
 
 .white-text {
-    color: white;
+    color: var(--text-primary);
 }

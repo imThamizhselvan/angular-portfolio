@@ -1,0 +1,36 @@
+<div class="article-container">
+  @if (loading()) {
+    <div class="loading">Loading article...</div>
+  }
+
+  @if (error()) {
+    <div class="error">
+      <p>{{ error() }}</p>
+      <a routerLink="/blog" class="back-link">Back to Blog</a>
+    </div>
+  }
+
+  @if (!loading() && !error() && article()) {
+    <article class="article">
+      <a routerLink="/blog" class="back-link">← Back to Blog</a>
+
+      <header class="article-header">
+        <h1>{{ article()!.title }}</h1>
+        <div class="meta">
+          <span class="author">By {{ article()!.author }}</span>
+          <span class="date">{{ article()!.date }}</span>
+          <span class="read-time">{{ article()!.readTime }} min read</span>
+        </div>
+        <div class="tags">
+          @for (tag of article()!.tags; track tag) {
+            <span class="tag">{{ tag }}</span>
+          }
+        </div>
+      </header>
+
+      <div class="article-content">
+        <markdown [data]="article()!.content"></markdown>
+      </div>
+    </article>
+  }
+</div>

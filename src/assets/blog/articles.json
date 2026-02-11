@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "slug": "getting-started-with-angular-signals",
+    "title": "Getting Started with Angular Signals",
+    "excerpt": "Learn how Angular Signals revolutionize state management with fine-grained reactivity and improved performance.",
+    "content": "# Getting Started with Angular Signals\n\nAngular Signals represent a major evolution in how we handle reactivity in Angular applications. Introduced in Angular 16, signals provide a new primitive for managing state with fine-grained reactivity.\n\n## What Are Signals?\n\nA signal is a wrapper around a value that notifies interested consumers when that value changes. Unlike observables, signals are synchronous and always have a current value.\n\n```typescript\nimport { signal, computed, effect } from '@angular/core';\n\n// Create a signal\nconst count = signal(0);\n\n// Read the value\nconsole.log(count()); // 0\n\n// Update the value\ncount.set(1);\ncount.update(v => v + 1);\n```\n\n## Computed Signals\n\nComputed signals derive their value from other signals:\n\n```typescript\nconst firstName = signal('John');\nconst lastName = signal('Doe');\n\nconst fullName = computed(() => `${firstName()} ${lastName()}`);\n```\n\n## Effects\n\nEffects allow you to run side effects when signal values change:\n\n```typescript\neffect(() => {\n  console.log(`Count is now: ${count()}`);\n});\n```\n\n## Why Use Signals?\n\n1. **Performance**: Fine-grained reactivity means fewer change detection cycles\n2. **Simplicity**: Easier to understand than RxJS for simple state\n3. **Integration**: Works seamlessly with existing Angular patterns\n\nSignals are the future of Angular reactivity, and now is the perfect time to start learning them!",
+    "author": "Developer",
+    "date": "2024-01-15",
+    "tags": ["Angular", "Signals", "TypeScript"],
+    "readTime": 5
+  },
+  {
+    "id": 2,
+    "slug": "building-modern-web-apps-with-nextjs",
+    "title": "Building Modern Web Apps with Next.js",
+    "excerpt": "Explore the power of Next.js for building fast, SEO-friendly React applications with server-side rendering.",
+    "content": "# Building Modern Web Apps with Next.js\n\nNext.js has become the go-to framework for building production-ready React applications. With features like server-side rendering, static generation, and API routes, it provides everything you need for modern web development.\n\n## Key Features\n\n### App Router\n\nNext.js 13+ introduced the App Router, a new way to structure your application:\n\n```\napp/\n  page.tsx        # Home page\n  layout.tsx      # Root layout\n  blog/\n    page.tsx      # Blog listing\n    [slug]/\n      page.tsx    # Individual blog post\n```\n\n### Server Components\n\nReact Server Components allow you to render components on the server:\n\n```typescript\n// This component runs on the server\nasync function BlogPosts() {\n  const posts = await fetchPosts();\n  return (\n    <ul>\n      {posts.map(post => (\n        <li key={post.id}>{post.title}</li>\n      ))}\n    </ul>\n  );\n}\n```\n\n### API Routes\n\nCreate backend endpoints directly in your Next.js app:\n\n```typescript\n// app/api/posts/route.ts\nexport async function GET() {\n  const posts = await db.posts.findMany();\n  return Response.json(posts);\n}\n```\n\n## Why Next.js?\n\n- **SEO-friendly**: Server rendering improves search engine visibility\n- **Performance**: Automatic code splitting and optimization\n- **Developer Experience**: Hot reloading, TypeScript support, and great tooling\n- **Deployment**: Seamless deployment with Vercel\n\nNext.js makes it easy to build fast, scalable web applications!",
+    "author": "Developer",
+    "date": "2024-01-10",
+    "tags": ["React", "Next.js", "Web Development"],
+    "readTime": 6
+  },
+  {
+    "id": 3,
+    "slug": "mastering-typescript-generics",
+    "title": "Mastering TypeScript Generics",
+    "excerpt": "Deep dive into TypeScript generics and learn how to write flexible, reusable, and type-safe code.",
+    "content": "# Mastering TypeScript Generics\n\nGenerics are one of the most powerful features in TypeScript. They allow you to write flexible, reusable code while maintaining type safety.\n\n## Basic Generics\n\nA generic function can work with any type:\n\n```typescript\nfunction identity<T>(arg: T): T {\n  return arg;\n}\n\nconst num = identity(42);      // number\nconst str = identity('hello'); // string\n```\n\n## Generic Constraints\n\nConstrain generics to specific shapes:\n\n```typescript\ninterface HasLength {\n  length: number;\n}\n\nfunction logLength<T extends HasLength>(arg: T): void {\n  console.log(arg.length);\n}\n\nlogLength('hello');    // Works\nlogLength([1, 2, 3]);  // Works\nlogLength(42);         // Error: number doesn't have length\n```\n\n## Generic Classes\n\n```typescript\nclass DataStore<T> {\n  private data: T[] = [];\n\n  add(item: T): void {\n    this.data.push(item);\n  }\n\n  getAll(): T[] {\n    return this.data;\n  }\n}\n\nconst stringStore = new DataStore<string>();\nstringStore.add('hello');\n```\n\n## Utility Types\n\nTypeScript provides built-in generic utility types:\n\n```typescript\ninterface User {\n  id: number;\n  name: string;\n  email: string;\n}\n\ntype PartialUser = Partial<User>;     // All properties optional\ntype ReadonlyUser = Readonly<User>;   // All properties readonly\ntype UserKeys = keyof User;           // 'id' | 'name' | 'email'\n```\n\nMastering generics will significantly improve your TypeScript code quality!",
+    "author": "Developer",
+    "date": "2024-01-05",
+    "tags": ["TypeScript", "JavaScript", "Programming"],
+    "readTime": 7
+  }
+]

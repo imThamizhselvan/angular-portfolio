@@ -1,0 +1,121 @@
+.blog-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 80px 20px 40px;
+
+  h1 {
+    text-align: center;
+    color: var(--text-primary);
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+  }
+}
+
+.loading,
+.error,
+.no-articles {
+  text-align: center;
+  padding: 40px;
+  color: var(--text-secondary);
+}
+
+.error {
+  color: #e74c3c;
+}
+
+.articles-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.article-card {
+  background: var(--bg-primary);
+  border-radius: 15px;
+  box-shadow: var(--shadow-outer-dark) 2px 2px 6px, var(--shadow-outer-light) -2px -2px 6px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-outer-dark) 4px 4px 12px, var(--shadow-outer-light) -4px -4px 12px;
+  }
+
+  a {
+    display: block;
+    padding: 25px;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  h2 {
+    color: var(--text-primary);
+    margin: 0 0 12px 0;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+  }
+
+  &:hover h2 {
+    color: var(--accent-color);
+  }
+
+  .excerpt {
+    color: var(--text-secondary);
+    margin: 0 0 15px 0;
+    line-height: 1.6;
+  }
+
+  .meta {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 12px;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+
+    .date,
+    .read-time {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    .tag {
+      background: var(--bg-secondary);
+      color: var(--accent-color);
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-size: 0.8rem;
+      border: 1px solid var(--border-color);
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .blog-container {
+    padding: 70px 15px 30px;
+
+    h1 {
+      font-size: 2rem;
+    }
+  }
+
+  .article-card {
+    a {
+      padding: 20px;
+    }
+
+    h2 {
+      font-size: 1.25rem;
+    }
+
+    .meta {
+      flex-direction: column;
+      gap: 8px;
+    }
+  }
+}

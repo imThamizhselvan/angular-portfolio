@@ -10,6 +10,12 @@
             <li (click)="setActive('book')">
                 <a routerLink="/book" routerLinkActive="active" [ngClass]="active === 'book' ? 'active' : ''">Bookshelf</a>
             </li>
+            <li (click)="setActive('blog')">
+                <a routerLink="/blog" routerLinkActive="active" [ngClass]="active === 'blog' ? 'active' : ''">Blog</a>
+            </li>
+            <li class="theme-toggle-container">
+                <app-theme-toggle></app-theme-toggle>
+            </li>
         </ul>
     </nav>
 </div>

@@ -1,0 +1,16 @@
+<div class="chart-container">
+  <h3>{{ title }}</h3>
+  <ngx-charts-bar-horizontal
+    [view]="view"
+    [results]="data"
+    [xAxis]="showXAxis"
+    [yAxis]="showYAxis"
+    [showXAxisLabel]="showXAxisLabel"
+    [showYAxisLabel]="showYAxisLabel"
+    [xAxisLabel]="xAxisLabel"
+    [yAxisLabel]="yAxisLabel"
+    [scheme]="colorScheme"
+    [xScaleMax]="100"
+    [roundEdges]="true">
+  </ngx-charts-bar-horizontal>
+</div>
