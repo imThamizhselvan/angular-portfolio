@@ -19,6 +19,9 @@ export const SKILLS_DATA: Skill[] = [
   // Mobile
   { name: 'React Native', level: 85, category: 'mobile' },
   { name: 'Ionic', level: 75, category: 'mobile' },
+  { name: 'Flutter', level: 40, category: 'mobile' },
+  { name: 'Native Script', level: 30, category: 'mobile' },
+
 
   // Backend
   { name: 'NodeJS', level: 85, category: 'backend' },

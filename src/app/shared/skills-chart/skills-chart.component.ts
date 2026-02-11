@@ -34,9 +34,10 @@ export class SkillsChartComponent implements OnInit {
   }
 
   private updateChartHeight(): void {
+    const maxItems = 7; // Use max item count for consistent height
     const barHeight = 35;
     const padding = 40;
-    this.view = [350, this.data.length * barHeight + padding];
+    this.view = [350, maxItems * barHeight + padding];
   }
 
   get isDark(): boolean {
