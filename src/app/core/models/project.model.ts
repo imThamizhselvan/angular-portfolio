@@ -30,4 +30,6 @@ export const TECH_LOGO_SLUGS: { [key: string]: string } = {
   'Netlify': 'netlify',
   'DeepSeek': 'openai',
   'OpenAI': 'openai',
+  'Vite': 'vite',
+  'Claude': 'anthropic',
 };

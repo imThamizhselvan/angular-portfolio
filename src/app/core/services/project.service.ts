@@ -19,6 +19,12 @@ export class ProjectService {
       videoUrl: 'assets/videos/chatbot.mp4',
       techStack: ['OpenAI', 'TypeScript', 'React', 'Netlify', 'Cursor'],
       link: 'https://deepseek.thamil.me/'
+    },
+    {
+      title: 'Australia School Holidays 2026',
+      description: 'Interactive web app showing 2026 school holidays for all Australian states with calendar view, countdown timer, and public holidays',
+      techStack: ['React', 'TypeScript', 'Vite', 'Netlify', 'Claude'],
+      link: 'https://ozschoolholidays.netlify.app/'
     }
   ];
 
