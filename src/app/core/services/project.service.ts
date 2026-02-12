@@ -24,7 +24,7 @@ export class ProjectService {
       title: 'Australia School Holidays 2026',
       description: 'Interactive web app showing 2026 school holidays for all Australian states with calendar view, countdown timer, and public holidays',
       techStack: ['React', 'TypeScript', 'Vite', 'Netlify', 'Claude'],
-      link: 'https://ozschoolholidays.netlify.app/'
+      link: 'https://ozschoolholidays.thamil.me'
     }
   ];
 
