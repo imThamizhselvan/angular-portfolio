@@ -11,20 +11,20 @@ export class ProjectService {
       description: 'Easy to use TODO that integrates with OpenAI and Supabase',
       videoUrl: 'assets/videos/todo.mp4',
       techStack: ['Cursor', 'Supabase', 'Netlify', 'React', 'OpenAI', 'TypeScript'],
-      link: 'https://todo.thamil.me'
+      link: 'https://todo.imthamil.com'
     },
     {
       title: 'Deepseek AI chat',
       description: 'Deepseek chatbot that integrates with Deepseek API and OpenAI API',
       videoUrl: 'assets/videos/chatbot.mp4',
       techStack: ['OpenAI', 'TypeScript', 'React', 'Netlify', 'Cursor'],
-      link: 'https://deepseek.thamil.me/'
+      link: 'https://deepseek.imthamil.com/'
     },
     {
       title: 'Australia School Holidays 2026',
       description: 'Interactive web app showing 2026 school holidays for all Australian states with calendar view, countdown timer, and public holidays',
       techStack: ['React', 'TypeScript', 'Vite', 'Netlify', 'Claude'],
-      link: 'https://ozschoolholidays.thamil.me'
+      link: 'https://ozschoolholidays.imthamil.com'
     }
   ];
 
