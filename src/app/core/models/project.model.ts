@@ -32,4 +32,8 @@ export const TECH_LOGO_SLUGS: { [key: string]: string } = {
   'OpenAI': 'openai',
   'Vite': 'vite',
   'Claude': 'anthropic',
+  'Stripe': 'stripe',
+  'Clerk': 'clerk',
+  'Prisma': 'prisma',
+  'Vercel': 'vercel',
 };

@@ -7,6 +7,11 @@ import { Project, TECH_LOGO_SLUGS } from '../models/project.model';
 export class ProjectService {
   private projects: Project[] = [
     {
+      title: 'Andy AI',
+      description: 'AI-powered receptionist that answers business calls 24/7, understands caller needs, and books appointments automatically — so businesses never miss a customer.',
+      techStack: ['React', 'Vite', 'TailwindCSS', 'Node.js', 'Prisma', 'Stripe', 'Clerk', 'Vercel'],
+    },
+    {
       title: 'Todo AI app',
       description: 'Easy to use TODO that integrates with OpenAI and Supabase',
       videoUrl: 'assets/videos/todo.mp4',
