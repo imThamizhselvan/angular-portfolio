@@ -10,6 +10,7 @@ export class ProjectService {
       title: 'Andy AI',
       description: 'AI-powered receptionist that answers business calls 24/7, understands caller needs, and books appointments automatically — so businesses never miss a customer.',
       techStack: ['React', 'Vite', 'TailwindCSS', 'Node.js', 'Prisma', 'Stripe', 'Clerk', 'Vercel'],
+      link: 'https://andyai.imthamil.com/',
     },
     {
       title: 'Todo AI app',
