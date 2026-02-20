@@ -1,4 +1,4 @@
-import { Component, Input, inject, OnDestroy, AfterViewInit, ElementRef } from '@angular/core';
+import { Component, Input, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { ThemeService } from '@core/services/theme.service';
@@ -11,15 +11,13 @@ import { SkillChartData } from '@core/models/skill.model';
   templateUrl: './skills-chart.component.html',
   styleUrls: ['./skills-chart.component.scss']
 })
-export class SkillsChartComponent implements AfterViewInit, OnDestroy {
+export class SkillsChartComponent implements OnInit {
   @Input() title = '';
   @Input() data: SkillChartData[] = [];
 
   private themeService = inject(ThemeService);
-  private el = inject(ElementRef);
-  private resizeObserver!: ResizeObserver;
 
-  view: [number, number] = [300, 200];
+  view: [number, number] = [350, 200];
   showXAxis = true;
   showYAxis = true;
   showXAxisLabel = false;
@@ -31,23 +29,22 @@ export class SkillsChartComponent implements AfterViewInit, OnDestroy {
     domain: ['#da6d3c', '#e87f50', '#f59164', '#ffa378']
   };
 
-  ngAfterViewInit(): void {
-    const container = this.el.nativeElement.querySelector('.chart-container');
-    if (container) {
-      this.resizeObserver = new ResizeObserver(entries => {
-        const width = Math.floor(entries[0].contentRect.width) - 40; // subtract 20px padding each side
-        const height = this.data.length * 35 + 40;
-        this.view = [Math.max(width, 160), height];
-      });
-      this.resizeObserver.observe(container);
-    }
+  ngOnInit(): void {
+    this.updateChartHeight();
   }
 
-  ngOnDestroy(): void {
-    this.resizeObserver?.disconnect();
+  private updateChartHeight(): void {
+    const maxItems = 7; // Use max item count for consistent height
+    const barHeight = 35;
+    const padding = 40;
+    this.view = [350, maxItems * barHeight + padding];
   }
 
   get isDark(): boolean {
     return this.themeService.theme() === 'dark';
+  }
+
+  get axisColor(): string {
+    return this.isDark ? '#b0b0b0' : '#555555';
   }
 }
