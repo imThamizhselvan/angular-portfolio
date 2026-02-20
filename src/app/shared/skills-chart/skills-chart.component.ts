@@ -1,4 +1,4 @@
-import { Component, Input, inject, OnInit } from '@angular/core';
+import { Component, Input, inject, OnInit, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { ThemeService } from '@core/services/theme.service';
@@ -30,14 +30,23 @@ export class SkillsChartComponent implements OnInit {
   };
 
   ngOnInit(): void {
-    this.updateChartHeight();
+    this.updateChartView();
   }
 
-  private updateChartHeight(): void {
-    const maxItems = 7; // Use max item count for consistent height
+  @HostListener('window:resize')
+  onResize(): void {
+    this.updateChartView();
+  }
+
+  private updateChartView(): void {
+    const maxItems = 7;
     const barHeight = 35;
     const padding = 40;
-    this.view = [350, maxItems * barHeight + padding];
+    const height = maxItems * barHeight + padding;
+    const isMobile = window.innerWidth <= 768;
+    // On mobile subtract container margins/paddings (skillsContainer: 10+12px each side, chart margin: 0)
+    const width = isMobile ? window.innerWidth - 64 : 350;
+    this.view = [width, height];
   }
 
   get isDark(): boolean {
