@@ -27,7 +27,7 @@ export class ProjectService {
       link: 'https://deepseek.imthamil.com/'
     },
     {
-      title: 'Australia School Holidays 2026',
+      title: 'Oz School Holidays',
       description: 'Interactive web app showing 2026 school holidays for all Australian states with calendar view, countdown timer, and public holidays',
       techStack: ['React', 'TypeScript', 'Vite', 'Netlify', 'Claude'],
       link: 'https://ozschoolholidays.imthamil.com'
