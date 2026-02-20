@@ -26,13 +26,18 @@ export const SKILLS_DATA: Skill[] = [
   // DevOps
   { name: 'GitHub', level: 90, category: 'devops' },
   { name: 'Jenkins', level: 82, category: 'devops' },
-  { name: 'AWS', level: 75, category: 'devops' },
+  { name: 'S3', level: 80, category: 'devops' },
+  { name: 'CloudFront', level: 75, category: 'devops' },
+  { name: 'Lambda', level: 72, category: 'devops' },
+  { name: 'CloudWatch', level: 70, category: 'devops' },
+  { name: 'EventBridge', level: 68, category: 'devops' },
+  { name: 'SQS', level: 68, category: 'devops' },
+  { name: 'SNS', level: 65, category: 'devops' },
   { name: 'Docker', level: 68, category: 'devops' },
   { name: 'Fastlane', level: 62, category: 'devops' },
 
   // Backend
   { name: 'NodeJS', level: 85, category: 'backend' },
-  { name: 'AWS', level: 70, category: 'backend' },
   { name: 'MongoDB', level: 80, category: 'backend' },
   { name: 'Firebase', level: 82, category: 'backend' },
   { name: 'Supabase', level: 75, category: 'backend' },
