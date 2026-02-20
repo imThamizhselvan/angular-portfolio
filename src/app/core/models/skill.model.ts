@@ -1,7 +1,7 @@
 export interface Skill {
   name: string;
   level: number;
-  category: 'frontend' | 'mobile' | 'backend';
+  category: 'frontend' | 'mobile' | 'backend' | 'devops';
 }
 
 export interface SkillChartData {
@@ -22,6 +22,13 @@ export const SKILLS_DATA: Skill[] = [
   { name: 'Flutter', level: 40, category: 'mobile' },
   { name: 'Native Script', level: 30, category: 'mobile' },
 
+
+  // DevOps
+  { name: 'GitHub', level: 90, category: 'devops' },
+  { name: 'Jenkins', level: 82, category: 'devops' },
+  { name: 'AWS', level: 75, category: 'devops' },
+  { name: 'Docker', level: 68, category: 'devops' },
+  { name: 'Fastlane', level: 62, category: 'devops' },
 
   // Backend
   { name: 'NodeJS', level: 85, category: 'backend' },

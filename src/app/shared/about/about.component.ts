@@ -13,4 +13,5 @@ export class AboutComponent {
   frontendSkills: SkillChartData[] = getSkillsByCategory('frontend');
   mobileSkills: SkillChartData[] = getSkillsByCategory('mobile');
   backendSkills: SkillChartData[] = getSkillsByCategory('backend');
+  devopsSkills: SkillChartData[] = getSkillsByCategory('devops');
 }
