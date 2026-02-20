@@ -39,6 +39,8 @@ export const SKILLS_DATA: Skill[] = [
   // Backend
   { name: 'NodeJS', level: 85, category: 'backend' },
   { name: 'MongoDB', level: 80, category: 'backend' },
+  { name: 'MySQL', level: 75, category: 'backend' },
+  { name: 'PostgreSQL', level: 72, category: 'backend' },
   { name: 'Firebase', level: 82, category: 'backend' },
   { name: 'Supabase', level: 75, category: 'backend' },
   { name: 'Netlify', level: 78, category: 'backend' },
