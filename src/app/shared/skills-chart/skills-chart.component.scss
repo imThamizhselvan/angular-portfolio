@@ -5,8 +5,7 @@
   padding: 20px;
   border-radius: 15px;
   background: var(--bg-primary);
-  box-shadow: inset 8px 8px 11px var(--shadow-dark),
-              inset -8px -8px 11px var(--shadow-light);
+  box-shadow: var(--shadow-outer-dark) 2px 2px 6px, var(--shadow-outer-light) -2px -2px 6px;
   margin: 15px;
   flex: 1;
   min-width: 300px;
