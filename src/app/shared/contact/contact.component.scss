@@ -1,6 +1,6 @@
 .contact-container {
     text-align: center;
-    padding-top: 40px;
+    padding: 40px 16px 0;
 }
 
 .flex-wrapper {
@@ -15,6 +15,7 @@
 
 .flex-wrapper.contact {
     width: 70%;
+    max-width: 600px;
     margin: auto;
     input, textarea {
         width: 100%;
@@ -28,6 +29,12 @@
         background: var(--bg-primary);
         color: var(--text-primary);
         transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+    }
+    textarea {
+        height: 120px;
+        padding-top: 12px;
+        border-radius: 15px;
+        resize: vertical;
     }
 }
 
@@ -56,4 +63,40 @@
 
 .white-text {
     color: var(--text-primary);
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        padding: 40px 12px 0;
+
+        h2 {
+            font-size: 1.4rem;
+        }
+
+        h3 {
+            font-size: 1rem;
+        }
+    }
+
+    .flex-wrapper.contact {
+        width: 92%;
+    }
+
+    .calendar-wrapper {
+        margin: 1rem 0;
+
+        iframe {
+            height: 500px;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .flex-wrapper.contact {
+        width: 100%;
+    }
+
+    .calendar-wrapper iframe {
+        height: 420px;
+    }
 }

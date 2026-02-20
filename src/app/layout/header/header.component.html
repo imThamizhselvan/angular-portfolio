@@ -1,22 +1,28 @@
 <div class="portfolio-category">
     <nav>
-        <ul>
-            <li (click)="setActive('home')">
-                <a routerLink="/home" routerLinkActive="active" [ngClass]="active === 'home' ? 'active' : ''">About</a>
-            </li>
-            <li (click)="setActive('projects')">
-                <a routerLink="/projects" routerLinkActive="active" [ngClass]="active === 'projects' ? 'active' : ''">Projects</a>
-            </li>
-            <li (click)="setActive('book')">
-                <a routerLink="/book" routerLinkActive="active" [ngClass]="active === 'book' ? 'active' : ''">Bookshelf</a>
-            </li>
-            <li (click)="setActive('blog')">
-                <a routerLink="/blog" routerLinkActive="active" [ngClass]="active === 'blog' ? 'active' : ''">Blog</a>
-            </li>
-            <li class="theme-toggle-container">
-                <app-theme-toggle></app-theme-toggle>
-            </li>
-        </ul>
+        <div class="nav-content">
+            <button class="hamburger" (click)="toggleMenu()" [class.active]="menuOpen" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul [class.open]="menuOpen">
+                <li (click)="setActive('home'); closeMenu()">
+                    <a routerLink="/home" routerLinkActive="active" [ngClass]="active === 'home' ? 'active' : ''">About</a>
+                </li>
+                <li (click)="setActive('projects'); closeMenu()">
+                    <a routerLink="/projects" routerLinkActive="active" [ngClass]="active === 'projects' ? 'active' : ''">Projects</a>
+                </li>
+                <li (click)="setActive('book'); closeMenu()">
+                    <a routerLink="/book" routerLinkActive="active" [ngClass]="active === 'book' ? 'active' : ''">Bookshelf</a>
+                </li>
+                <li (click)="setActive('blog'); closeMenu()">
+                    <a routerLink="/blog" routerLinkActive="active" [ngClass]="active === 'blog' ? 'active' : ''">Blog</a>
+                </li>
+                <li class="theme-toggle-container" (click)="closeMenu()">
+                    <app-theme-toggle></app-theme-toggle>
+                </li>
+            </ul>
+        </div>
     </nav>
 </div>
-

@@ -9,7 +9,7 @@
               inset -8px -8px 11px var(--shadow-light);
   margin: 15px;
   flex: 1;
-  min-width: 300px;
+  min-width: 260px;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 
   h3 {
@@ -40,7 +40,10 @@
 
 @media (max-width: 768px) {
   .chart-container {
-    min-width: 280px;
+    min-width: 0;
+    width: 100%;
+    margin: 8px 0;
     padding: 15px;
+    min-height: 260px;
   }
 }

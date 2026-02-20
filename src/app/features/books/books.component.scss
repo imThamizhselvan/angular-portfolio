@@ -1,6 +1,8 @@
 .workContainer {
     text-align: center;
     padding-top: 70px;
+    padding-left: 8px;
+    padding-right: 8px;
     color: var(--text-primary);
 }
 
@@ -14,7 +16,7 @@
     .workParts {
         margin: 20px;
         flex-grow: 1;
-
+        max-width: calc(50% - 40px);
         padding: 20px;
         border-radius: 15px;
         background: var(--bg-primary);
@@ -32,3 +34,13 @@
     }
 }
 
+@media (max-width: 768px) {
+    .flex-wrapper {
+        .workParts {
+            max-width: 100%;
+            width: 100%;
+            margin: 10px;
+            padding: 16px;
+        }
+    }
+}

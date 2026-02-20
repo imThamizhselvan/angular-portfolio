@@ -13,6 +13,7 @@ import { ThemeToggleComponent } from '@app/shared/theme-toggle/theme-toggle.comp
 })
 export class HeaderComponent {
   private navigationService = inject(NavigationService);
+  menuOpen = false;
 
   get active() {
     return this.navigationService.active();
@@ -20,5 +21,13 @@ export class HeaderComponent {
 
   setActive(tab: string) {
     this.navigationService.setActive(tab);
+  }
+
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
+  }
+
+  closeMenu() {
+    this.menuOpen = false;
   }
 }

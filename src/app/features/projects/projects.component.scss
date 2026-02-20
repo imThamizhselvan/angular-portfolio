@@ -173,16 +173,26 @@
     .wrapper {
         padding: 1rem;
     }
-    
+
     .header .profile {
         flex-direction: column;
-        
+
         h1 {
             font-size: 2rem;
         }
     }
-    
+
     .projects-container {
         grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .project {
+        padding: 1.5rem;
+    }
+
+    .scroll-top {
+        bottom: 1rem;
+        right: 1rem;
     }
 }

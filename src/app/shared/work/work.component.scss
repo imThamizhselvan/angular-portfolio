@@ -1,6 +1,8 @@
 .workContainer {
     text-align: center;
     padding-top: 40px;
+    padding-left: 8px;
+    padding-right: 8px;
 }
 
 .flex-wrapper {
@@ -14,6 +16,7 @@
         margin: 20px;
         flex-grow: 1;
         width: 300px;
+        max-width: 100%;
         padding: 20px;
         border-radius: 15px;
         background: var(--bg-primary);
@@ -30,3 +33,13 @@
     }
 }
 
+@media (max-width: 600px) {
+    .flex-wrapper {
+        .workParts {
+            margin: 10px;
+            width: 100%;
+            min-width: 0;
+            padding: 16px;
+        }
+    }
+}
