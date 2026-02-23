@@ -1,7 +1,7 @@
 export interface Project {
   title: string;
   description: string;
-  videoUrl?: string;
+  screenshots?: string[];
   techStack: string[];
   link?: string;
 }

@@ -1,9 +1,8 @@
 <div class="wrapper">
-  <!-- Header -->
-
 
   <!-- Main Content -->
   <div class="projects-container">
+
     <!-- Loading Skeleton -->
     @if (isLoading) {
       @for (i of [1,2]; track i) {
@@ -11,7 +10,7 @@
           <div class="skeleton-content">
             <div class="skeleton-title"></div>
             <div class="skeleton-description"></div>
-            <div class="skeleton-video"></div>
+            <div class="skeleton-carousel"></div>
             <div class="skeleton-tech">
               <div class="skeleton-tech-title"></div>
               <div class="skeleton-tech-tags">
@@ -28,22 +27,44 @@
 
     <!-- Projects -->
     @if (!isLoading) {
-      @for (project of projects; track project) {
+      @for (project of projects; track project; let i = $index) {
         <div class="project"
           @fadeInUp
           [@scale]="projectState"
           (mouseenter)="projectState='hovered'"
           (mouseleave)="projectState='normal'">
+
           <h2>{{project.title}}</h2>
           <p class="description">{{project.description}}</p>
-          <div class="video-container">
-            @if (project.videoUrl) {
-              <video controls>
-                <source [src]="project.videoUrl" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-            }
-          </div>
+
+          <!-- Screenshot Carousel -->
+          @if (project.screenshots && project.screenshots.length > 0) {
+            <div class="carousel">
+              <img
+                [src]="project.screenshots[carouselIndices[i]]"
+                [alt]="project.title + ' screenshot ' + (carouselIndices[i] + 1)"
+                class="carousel-img"
+              />
+
+              @if (project.screenshots.length > 1) {
+                <button class="carousel-btn prev" (click)="prevSlide(i, project.screenshots.length)">&#8249;</button>
+                <button class="carousel-btn next" (click)="nextSlide(i, project.screenshots.length)">&#8250;</button>
+
+                <div class="carousel-dots">
+                  @for (shot of project.screenshots; track $index; let d = $index) {
+                    <button
+                      class="dot"
+                      [class.active]="carouselIndices[i] === d"
+                      (click)="setSlide(i, d)"
+                      [attr.aria-label]="'Go to screenshot ' + (d + 1)">
+                    </button>
+                  }
+                </div>
+              }
+            </div>
+          }
+
+          <!-- Tech Stack -->
           <div class="tech-stack">
             <h3>Tech Stack</h3>
             <div class="tech-tags">
@@ -55,11 +76,9 @@
               }
             </div>
           </div>
+
           @if (project.link) {
-            <a
-              [href]="project.link"
-              target="_blank"
-              class="twitter-link">
+            <a [href]="project.link" target="_blank" class="twitter-link">
               Visit website
             </a>
           }
@@ -70,11 +89,6 @@
 
   <!-- Scroll to top button -->
   @if (showScrollTop) {
-    <button
-      class="scroll-top"
-      (click)="scrollToTop()"
-      @fadeInUp>
-      ↑
-    </button>
+    <button class="scroll-top" (click)="scrollToTop()" @fadeInUp>↑</button>
   }
 </div>

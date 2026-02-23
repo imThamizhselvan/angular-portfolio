@@ -32,8 +32,12 @@ export class ProjectsComponent implements OnInit {
   showScrollTop = false;
   projectState = 'normal';
 
+  // One current-slide index per project
+  carouselIndices: number[] = [];
+
   ngOnInit() {
     this.projects = this.projectService.getProjects();
+    this.carouselIndices = this.projects.map(() => 0);
     setTimeout(() => this.isLoading = false, 2000);
   }
 
@@ -48,5 +52,17 @@ export class ProjectsComponent implements OnInit {
 
   getTechLogo(tech: string): string {
     return this.projectService.getTechLogo(tech);
+  }
+
+  prevSlide(projectIdx: number, total: number) {
+    this.carouselIndices[projectIdx] = (this.carouselIndices[projectIdx] - 1 + total) % total;
+  }
+
+  nextSlide(projectIdx: number, total: number) {
+    this.carouselIndices[projectIdx] = (this.carouselIndices[projectIdx] + 1) % total;
+  }
+
+  setSlide(projectIdx: number, slideIdx: number) {
+    this.carouselIndices[projectIdx] = slideIdx;
   }
 }
