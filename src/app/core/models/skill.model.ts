@@ -1,7 +1,7 @@
 export interface Skill {
   name: string;
   level: number;
-  category: 'frontend' | 'mobile' | 'backend' | 'devops';
+  category: 'frontend' | 'mobile' | 'backend' | 'devops' | 'ai';
 }
 
 export interface SkillChartData {
@@ -45,6 +45,14 @@ export const SKILLS_DATA: Skill[] = [
   { name: 'Supabase', level: 75, category: 'backend' },
   { name: 'Netlify', level: 78, category: 'backend' },
   { name: 'Vercel', level: 80, category: 'backend' },
+
+  // AI
+  { name: 'ChatGPT', level: 90, category: 'ai' },
+  { name: 'Claude', level: 88, category: 'ai' },
+  { name: 'GitHub Copilot', level: 85, category: 'ai' },
+  { name: 'OpenAI API', level: 80, category: 'ai' },
+  { name: 'LangChain', level: 70, category: 'ai' },
+  { name: 'Hugging Face', level: 65, category: 'ai' },
 ];
 
 export function getSkillsByCategory(category: Skill['category']): SkillChartData[] {
