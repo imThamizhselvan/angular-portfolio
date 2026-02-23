@@ -36,4 +36,7 @@ export const TECH_LOGO_SLUGS: { [key: string]: string } = {
   'Clerk': 'clerk',
   'Prisma': 'prisma',
   'Vercel': 'vercel',
+  'Zustand': 'zustand',
+  'Radix UI': 'radixui',
+  'Framer Motion': 'framer',
 };

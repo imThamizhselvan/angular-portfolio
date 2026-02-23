@@ -7,6 +7,12 @@ import { Project, TECH_LOGO_SLUGS } from '../models/project.model';
 export class ProjectService {
   private projects: Project[] = [
     {
+      title: 'CEO Habits',
+      description: 'Gamified habit tracker with an 8-level career progression system. Track daily habits, earn XP, unlock achievements, and climb from Intern to CEO.',
+      techStack: ['React', 'TypeScript', 'Vite', 'TailwindCSS', 'Supabase', 'Clerk', 'Zustand', 'Framer Motion', 'Netlify'],
+      link: 'https://habits.imthamil.com/',
+    },
+    {
       title: 'Andy AI',
       description: 'AI-powered receptionist that answers business calls 24/7, understands caller needs, and books appointments automatically — so businesses never miss a customer.',
       techStack: ['React', 'Vite', 'TailwindCSS', 'Node.js', 'Prisma', 'Stripe', 'Clerk', 'Vercel'],
