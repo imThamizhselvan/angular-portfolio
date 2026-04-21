@@ -28,16 +28,6 @@ export class ProjectService {
       link: 'https://andyai.imthamil.com/',
     },
     {
-      title: 'AI executor',
-      description: 'Easy to use TODO that integrates with OpenAI and Supabase',
-      screenshots: [
-        'assets/screenshots/todo/1.png',
-        'assets/screenshots/todo/2.png',
-      ],
-      techStack: ['Cursor', 'Supabase', 'Netlify', 'React', 'OpenAI', 'TypeScript'],
-      link: 'https://todo.imthamil.com'
-    },
-    {
       title: 'Deepseek AI chat',
       description: 'Deepseek chatbot that integrates with Deepseek API and OpenAI API',
       screenshots: [
