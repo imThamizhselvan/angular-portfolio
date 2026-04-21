@@ -40,7 +40,9 @@ export class ProjectService {
     {
       title: 'Ubuntu OS Portfolio',
       description: 'A portfolio website designed to look and feel like an Ubuntu desktop OS, with interactive windows, apps, and a terminal.',
-      screenshots: [],
+      screenshots: [
+        'assets/screenshots/ubuntu/1.png',
+      ],
       techStack: ['React', 'TypeScript', 'TailwindCSS'],
       link: 'https://os.imthamil.com/'
     },
