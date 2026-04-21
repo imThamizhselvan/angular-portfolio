@@ -7,7 +7,7 @@ import { Project, TECH_LOGO_SLUGS } from '../models/project.model';
 export class ProjectService {
   private projects: Project[] = [
     {
-      title: 'CEO Habits',
+      title: 'Habits',
       description: 'Gamified habit tracker with an 8-level career progression system. Track daily habits, earn XP, unlock achievements, and climb from Intern to CEO.',
       screenshots: [
         'assets/screenshots/ceohabits/1.png',
