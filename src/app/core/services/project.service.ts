@@ -48,6 +48,13 @@ export class ProjectService {
       link: 'https://deepseek.imthamil.com/'
     },
     {
+      title: 'Ubuntu OS Portfolio',
+      description: 'A portfolio website designed to look and feel like an Ubuntu desktop OS, with interactive windows, apps, and a terminal.',
+      screenshots: [],
+      techStack: ['React', 'TypeScript', 'TailwindCSS'],
+      link: 'https://os.imthamil.com/'
+    },
+    {
       title: 'Oz School Holidays',
       description: 'Interactive web app showing 2026 school holidays for all Australian states with calendar view, countdown timer, and public holidays',
       screenshots: [
