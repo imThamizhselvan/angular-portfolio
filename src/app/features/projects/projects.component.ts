@@ -1,6 +1,6 @@
 import { Component, OnInit, HostListener, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { trigger, state, style, transition, animate } from '@angular/animations';
+import { trigger, style, transition, animate } from '@angular/animations';
 import { ProjectService } from '@core/services/project.service';
 import { Project } from '@core/models/project.model';
 
@@ -17,11 +17,6 @@ import { Project } from '@core/models/project.model';
         animate('500ms ease-out', style({ opacity: 1, transform: 'translateY(0)' }))
       ])
     ]),
-    trigger('scale', [
-      state('normal', style({ transform: 'scale(1)' })),
-      state('hovered', style({ transform: 'scale(1.02)' })),
-      transition('normal <=> hovered', animate('200ms ease-in-out'))
-    ])
   ]
 })
 export class ProjectsComponent implements OnInit {
@@ -30,8 +25,6 @@ export class ProjectsComponent implements OnInit {
   projects: Project[] = [];
   isLoading = true;
   showScrollTop = false;
-  projectState = 'normal';
-
   // One current-slide index per project
   carouselIndices: number[] = [];
 

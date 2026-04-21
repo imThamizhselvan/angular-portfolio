@@ -29,10 +29,7 @@
     @if (!isLoading) {
       @for (project of projects; track project; let i = $index) {
         <div class="project"
-          @fadeInUp
-          [@scale]="projectState"
-          (mouseenter)="projectState='hovered'"
-          (mouseleave)="projectState='normal'">
+          @fadeInUp>
 
           <h2>{{project.title}}</h2>
           <p class="description">{{project.description}}</p>
