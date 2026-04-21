@@ -47,6 +47,15 @@ export class ProjectService {
       link: 'https://os.imthamil.com/'
     },
     {
+      title: 'LLM Benchmark',
+      description: 'A simple dashboard to compare AI language models at a glance — benchmark scores (MMLU, HumanEval, MATH, GSM8K, ARC), cost per token, speed, and context window across all major providers.',
+      screenshots: [
+        'assets/screenshots/llmbenchmarks/1.png',
+      ],
+      techStack: ['React', 'TypeScript', 'Vite', 'TailwindCSS', 'Netlify'],
+      link: 'https://llm-benchmarks.netlify.app/'
+    },
+    {
       title: 'Oz School Holidays',
       description: 'Interactive web app showing 2026 school holidays for all Australian states with calendar view, countdown timer, and public holidays',
       screenshots: [
