@@ -28,7 +28,7 @@ export class ProjectService {
       link: 'https://andyai.imthamil.com/',
     },
     {
-      title: 'Todo AI app',
+      title: 'AI executor',
       description: 'Easy to use TODO that integrates with OpenAI and Supabase',
       screenshots: [
         'assets/screenshots/todo/1.png',
