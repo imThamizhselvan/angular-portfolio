@@ -2,6 +2,44 @@
     text-align: center;
 }
 
+.bioContainer {
+    max-width: 800px;
+    margin: 0 auto 20px;
+    padding: 0 16px;
+    text-align: left;
+
+    p {
+        color: var(--text-secondary);
+        line-height: 1.6;
+        margin-bottom: 16px;
+    }
+
+    .highlights {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            position: relative;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 12px;
+            padding-left: 20px;
+
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 10px;
+                width: 6px;
+                height: 6px;
+                border-radius: 50%;
+                background: var(--accent-color);
+            }
+        }
+    }
+}
+
 .skillsContainer {
     margin: 20px;
     padding: 20px;
