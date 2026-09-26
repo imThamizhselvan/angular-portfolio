@@ -15,7 +15,7 @@ export class ProjectService {
         'assets/screenshots/kolam/3.jpg',
       ],
       techStack: ['JavaScript', 'HTML', 'CSS', 'Claude'],
-      link: 'https://github.com/imThamizhselvan/kolam',
+      link: 'https://kolam.imthamil.com/',
     },
     {
       title: 'Habits',
