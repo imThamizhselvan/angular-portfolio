@@ -7,6 +7,17 @@ import { Project, TECH_LOGO_SLUGS } from '../models/project.model';
 export class ProjectService {
   private projects: Project[] = [
     {
+      title: 'Kolam',
+      description: 'A tribute to the kolam — the sacred line drawn at South Indian doorsteps to welcome prosperity. Every kolam is generated as a single unbroken line woven around its dots, and drawn live in one continuous stroke, with a gallery of thirty.',
+      screenshots: [
+        'assets/screenshots/kolam/1.jpg',
+        'assets/screenshots/kolam/2.jpg',
+        'assets/screenshots/kolam/3.jpg',
+      ],
+      techStack: ['JavaScript', 'HTML', 'CSS', 'Claude'],
+      link: 'https://github.com/imThamizhselvan/kolam',
+    },
+    {
       title: 'Habits',
       description: 'Gamified habit tracker with an 8-level career progression system. Track daily habits, earn XP, unlock achievements, and climb from Intern to CEO.',
       screenshots: [
